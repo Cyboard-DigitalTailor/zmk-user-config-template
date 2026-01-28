@@ -7,15 +7,13 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    chosen { zmk,matrix-transform = &imprint_function_row;
+    chosen { zmk,matrix-transform = &imprint_letters_only;
     };
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
- &kp ESC    &kp F1    &kp F2    &kp F3    &kp F4  &kp F5                                         &kp F6      &kp F7     &kp F8    &kp F9   &kp F10  &kp F11
- &kp EQUAL  &kp N1    &kp N2    &kp N3    &kp N4  &kp N5                                         &kp N6      &kp N7     &kp N8    &kp N9   &kp N0   &kp MINUS
  &kp TAB    &kp Q     &kp W     &kp E     &kp R   &kp T                                          &kp Y       &kp U      &kp I     &kp O    &kp P    &kp BSLH
  &kp LCTRL  &kp A     &kp S     &kp D     &kp F   &kp G                                          &kp H       &kp J      &kp K     &kp L    &kp SEMI &kp SQT
  &kp LSHFT  &kp Z     &kp X     &kp C     &kp V   &kp B                                          &kp N       &kp M      &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
@@ -27,8 +25,6 @@
 
         Numpad_Nav_Layer {
             bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans   &trans   &trans    &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans   &trans   &trans    &trans  &trans
  &trans  &trans  &kp N7  &kp N8  &kp N9  &trans                                     &trans  &kp HOME &kp UP   &kp END   &trans  &trans
  &trans  &trans  &kp N4  &kp N5  &kp N6  &trans                                     &trans  &kp LEFT &kp DOWN &kp RIGHT &trans  &trans
  &trans  &trans  &kp N1  &kp N2  &kp N3  &trans                                     &trans  &trans   &trans   &trans    &trans  &trans
@@ -40,8 +36,6 @@
 
         Keyboard_Control_Layer {
             bindings = <
- &trans      &trans  &trans  &trans  &trans  &trans                                     &trans         &trans           &trans          &trans          &trans          &trans
- &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4           &trans         &rgb_ug RGB_TOG  &rgb_ug RGB_EFF &trans          &trans          &trans
  &sys_reset      &trans  &trans  &trans  &trans  &studio_unlock                             &studio_unlock &rgb_ug RGB_HUI  &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &sys_reset
  &bootloader &trans  &trans  &trans  &trans  &trans                                     &trans         &rgb_ug RGB_HUD  &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &bootloader
  &to 4      &trans  &trans  &trans  &trans  &trans                                     &trans         &trans           &trans          &trans          &trans          &to 4
@@ -54,8 +48,6 @@
         Auto_Mouse_Layer {
             bindings = <
  &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
                  &trans  &trans                                                                     &trans  &trans
@@ -66,8 +58,6 @@
 
         factory_test {
             bindings = <
-&kp N0  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5            &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp N1
-&kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7            &kp N8  &kp N9  &kp N0  &kp N1  &kp N2  &kp N3
 &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9            &kp N0  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
 &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp N1            &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7
 &kp N8  &kp N9  &kp N0  &kp N1  &kp N2  &kp N3            &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9
